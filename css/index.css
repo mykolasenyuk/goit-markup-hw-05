@@ -3,25 +3,27 @@
 .hero{
     min-height: 600px;
     padding-top: 200px;
-    padding-bottom: 200px;
+    
     text-align: center;
-    background-color:#2F303A;
+    
    
 
 }
 .overlay{
     display: block;
-    margin: auto;
-    height: 600px;
+    margin: 0 auto;
+    min-height: 600px;
     max-width: 1600px;
-    background-size: contain;
+    
     background-image: linear-gradient(
         to right,
     rgba(47, 48, 58, 0.4),  
     rgba(47, 48, 58, 0.4)),
      url('../img/index/bacground_picture.jpg');
+     background-position: center;
     background-repeat: no-repeat;
-    background-position: center;
+
+    
 }
 .hero-title{
     margin-top: 0;
@@ -278,12 +280,13 @@
     height: 44px;
     border-radius: 50%;
     fill: #AFB1B8;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus{
     background-color: var(--accent-color);
     fill: var(--primary-white-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 
@@ -307,6 +310,7 @@
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8 ;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon{
     height: 50px;
@@ -316,7 +320,6 @@
 .client-link:focus{
     border:1px solid var(--accent-color);
     fill: var(--accent-color) ;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -335,39 +338,42 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     
     
 }
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
+   
     
     
 }
 
 .backdrop.is-hidden .modal{
-    transform: scale(1.2)  translate(-50%,-50%);
+    transform: scale(0) translate(-50%,-50%);
+  
 }
 
 .modal{
     position: absolute;
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    width: 528px;
-    height: 581px;
-
+    
+    min-width: 528px;
+    min-height: 581px;
+    
     background-color: #fff;
     
      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
      border-radius: 4px;
     transform: scale(1)  translate(-50%,-50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
-     ;
+    transition:  2540ms cubic-bezier(0.4, 0, 0.2, 1);
      
 }
-.modal-close-button{
+.close-btn{
     position: absolute;
     right: 0;
     display: flex;
