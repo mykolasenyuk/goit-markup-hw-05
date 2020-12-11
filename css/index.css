@@ -60,9 +60,14 @@
     text-align: center;
     color: var(--primary-white-color);
     background-color: var(--accent-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      
+}
+.button:hover,
+.button:focus{
     
-    
-    
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
   
@@ -133,7 +138,8 @@
 .title{
     margin-top: 0;
     margin-bottom: 10px;
-    color: var(--custom-text-color);font-family: Roboto;
+    color: var(--custom-text-color);
+    font-family: Roboto;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -287,6 +293,8 @@
     background-color: var(--accent-color);
     fill: var(--primary-white-color);
     
+    transition:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 
@@ -352,7 +360,7 @@
 }
 
 .backdrop.is-hidden .modal{
-    transform: scale(5) ;
+    transform: scale(5) rotate(180deg) ;
     opacity: 0;
   
 }
